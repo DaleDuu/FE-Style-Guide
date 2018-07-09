@@ -289,6 +289,46 @@
     // good
     const [position, benchmark] = array;
     ```    
-        
     
+<a name="es6-arrow"></a><a name="5.5"></a>
+  - [5.5](#es6-arrow) When you must use an anonymous function, use arrow function notation.
+  
+   > It creates a version of the function that executes in the context of `this`.
+
+    ```javascript
+
+    // bad
+    ['zh-hans', 'en', 'fr'].map(function(locale) {
+      // ...
+    }
+
+    // good
+      ['zh-hans', 'en', 'fr'].map((locale) => {
+      // ...
+    }
+    ```        
+        
+<a name="es6-arrow-single-argument"></a><a name="5.6"></a>
+  - [5.6](#es6-arrow-single-argument) Single argument in arrow function
+  
+   > Less visual clutter.
+
+    ```javascript
+
+    // bad
+    [1, 2, 3].map((x) => x * x);
+    
+    // good
+    [1, 2, 3].map(x => x * x);
+    
+    // bad
+    [1, 2, 3].map(x => {
+      // ...
+    });
+    
+    // good
+    [1, 2, 3].map((x) => {
+      // ...
+    });
+    ```          
     
