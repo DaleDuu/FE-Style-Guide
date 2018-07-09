@@ -61,29 +61,29 @@
 <a name="default-value-destructuring"></a><a name="2.2"></a>
  - [2.2](#default-value-destructuring) Set default value when object be destructured
 
-  ```javascript
-  // bad
-  const { questions, application } = this.props;
-  const count = questions.length;
-  
-  // good
-  const { questions = [], application = {} } = this.props;
-  const count = questions.length;
-  ```
+    ```javascript
+    // bad
+    const { questions, application } = this.props;
+    const count = questions.length;
+
+    // good
+    const { questions = [], application = {} } = this.props;
+    const count = questions.length;
+    ```
   
 <a name="default-value-arguments"></a><a name="2.3"></a>
  - [2.3](#default-value-arguments) Set default value in method arguments
 
- ```javascript
- // bad
-  const mapState = (state, { params: { id, order } }) => {
-		  // ...feature
-	});
+   ```javascript
+   // bad
+   const mapState = (state, { params: { id, order } }) => {
+     // ...feature
+   });
 
- // good
+  // good
   const mapState = (state, { params: { id, order = 0 } }) => {
-		  // ...feature
-	});
+     // ...feature
+  });
  ```
   
 ## Format    
