@@ -66,11 +66,10 @@
     ```javascript
     // bad
     const { questions, application } = this.props;
-    const count = questions.length;
+    application || {};
 
     // good
     const { questions = [], application = {} } = this.props;
-    const count = questions.length;
     ```
   
 <a name="default-value-arguments"></a><a name="2.3"></a>
@@ -107,6 +106,7 @@
       benchmark,
     };
     ```
+    
 <a name="format-jsx"></a><a name="3.2"></a>
   - [3.2](#format-jsx) Put the JSX in the second line below the ( if it needs multiple lines.
 
@@ -132,7 +132,53 @@
            onChange={this.handleChange(option)}
          />
       )) }
-    ```    
+    ``` 
+   
+<a name="format-quotes"></a><a name="3.3"></a>
+  - [3.3](#format-quotes) Use single quotes `''` for strings. eslint: [`quotes`](https://eslint.org/docs/rules/quotes.html)
+
+    ```javascript
+
+    // bad
+    const name = "Dale Du";
+    
+    // bad - Just for template literals should contain interpolation.
+    const name = `Dale Du`;
+
+    // good
+    const name = 'Dale Du';
+    ```   
+  
+<a name="format-quotes"></a><a name="3.4"></a>
+  - [3.4](#format-quotes) Use single quotes `''` for strings. eslint: [`quotes`](https://eslint.org/docs/rules/quotes.html)
+
+    ```javascript
+
+    // bad
+    const name = "Dale Du";
+    
+    // bad - Just for template literals should contain interpolation.
+    const name = `Dale Du`;
+
+    // good
+    const name = 'Dale Du';
+    ```   
+    
+<a name="format-default-param"></a><a name="3.5"></a>
+  - [3.5](#format-default-param) Always put default parameters last.
+
+    ```javascript
+
+    // bad
+    function setDevice( device = {}, app ) {
+      // ...
+    }
+
+    // good
+    function setDevice( app, device = {} ) {
+      // ...
+    }
+    ```      
     
  ## Semantization
  <a name="semantization-magic-number"></a><a name="4.1"></a>
