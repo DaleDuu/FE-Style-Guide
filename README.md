@@ -190,5 +190,59 @@
 
     // good
     ![TRANSCODE_STATUS.DONE, TRANSCODE_STATUS.ERROR].includes(status)   
+    ```
+       
+<a name="es6-spreads"></a><a name="5.2"></a>
+  - [5.2](#es6-spreads) Use spread `...` instead of `Array.from`
+
+    > To convert an iterable object to an array, use spreads `...` instead of `Array.from`
+
+    ```javascript
+    
+    const questions = document.querySelectorAll('.question');
+
+    // good
+    const questionNodes = Array.from(questions);
+
+    // best
+    const questionNodes = [...questions];
+    ```
+    
+<a name="es6-object-destructuring"></a><a name="5.3"></a>
+  - [5.3](#es6-object-destructuring) Use object destructuring
+
+    > Destructuring saves you data from creating temporary references for those properties;
+
+    ```javascript
+
+    // bad
+    getUserInfo(user) {
+      const avatar = user.avatar;
+      const cv = user.cv;
+      
+      return `${avatar}-${cv}`
+    }
+
+    // good
+    getUserInfo(user) {
+      const { avatar, cv } = user;
+      return `${avatar}-${cv}`
+    }
+    ```    
+    
+<a name="es6-array-destructuring"></a><a name="5.4"></a>
+  - [5.4](#es6-array-destructuring) Use array destructuring
+
+    ```javascript
+    const array = [1, 2, 3];
+
+    // bad
+    const position = array[0];
+    const benchmark = array[1];
+
+    // good
+    const [position, benchmark] = array;
+    ```    
+        
     
     
