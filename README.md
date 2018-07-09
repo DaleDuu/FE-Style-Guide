@@ -295,7 +295,7 @@
   
    > It creates a version of the function that executes in the context of `this`.
 
-    ```javascript
+   ```javascript
 
     // bad
     ['zh-hans', 'en', 'fr'].map(function(locale) {
@@ -313,7 +313,7 @@
   
    > Less visual clutter.
 
-    ```javascript
+   ```javascript
 
     // bad
     [1, 2, 3].map((x) => x * x);
