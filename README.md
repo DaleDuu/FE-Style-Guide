@@ -2,13 +2,12 @@
 
 ## Table of Contents
 1. [Types](#types)
-1. [Format](#format)
 
 ## Types
  <a name="types--references"></a><a name="1.1"></a>
    - [1.1](#references--disallow-var) If you reassign references, use `let` instead of `var`. eslint: [`no-var`](https://eslint.org/docs/rules/no-var.html)
 
-    > `let` is block-scoped rether than function-scoped like `var`.
+    > Why? `let` is block-scoped rether than function-scoped like `var`.
 
     ```javascript
     // bad
@@ -25,5 +24,3 @@
       maxPage += 1;
     }
     ```
-
-## Format
