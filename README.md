@@ -5,10 +5,10 @@
 1. [Format](#format)
 
 ## Types
-If you reassign ferences, use `let` instead of `var`. eslint: [`no-var`](https://eslint.org/docs/rules/no-var.html)
+ <a name="types--references"></a><a name="1.1"></a>
+   - [1.1](#references--disallow-var) If you reassign references, use `let` instead of `var`. eslint: [`no-var`](https://eslint.org/docs/rules/no-var.html)
 
     > `let` is block-scoped rether than function-scoped like `var`.
-
 
     ```javascript
     // bad
@@ -24,14 +24,6 @@ If you reassign ferences, use `let` instead of `var`. eslint: [`no-var`](https:/
     if (answerType) {
       maxPage += 1;
     }
-    ```
-    
-    ```javascript
-    // bad
-    const item = new Object();
-
-    // good
-    const item = {};
     ```
 
 ## Format
