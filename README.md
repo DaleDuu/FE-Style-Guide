@@ -5,6 +5,7 @@
 1. [DefaultValue](#default-value)
 1. [Format](#format)
 1. [Semantization](#semantization)
+1. [ES6](#es6)
 
 ## Types
  <a name="types--references"></a><a name="1.1"></a>
@@ -149,4 +150,45 @@
     const AT_LEAST_NOT_ZH = 100;
     const minimum = question.language === 'zh' ? AT_LEAST_ZH : AT_LEAST_NOT_ZH);
     ```
+<a name="semantization-isXXX-method"></a><a name="4.2"></a>
+  - [4.2](#semantization-isXXX-method) Method be defined as isXXX
+
+    > One method check necessary should be defined as isXXX.
+
+    ```javascript
+
+    // bad
+    closed () {
+       const { dispatch, id: position, position: { status: positionStatus } = {} } = this.props;
+       if (positionStatus === POSITION_STATUS.CLOSED) {
+         dispatch(RoutingModule.push(`position/${position}`));
+         return true;
+       }
+       return false;
+     }
+
+    // good
+    isClosed () {
+      const { dispatch, id: position, position: { status: positionStatus } = {} } = this.props;
+      if (positionStatus === POSITION_STATUS.CLOSED) {
+        dispatch(RoutingModule.push(`position/${position}`));
+        return true;
+      }
+      return false;
+    }
+    ```  
+## ES6    
+<a name="es6-array-includes"></a><a name="5.1"></a>
+  - [5.1](#es6-array-includes) Array.prototype.includes
+
+    > The includes() method determines whether an array includes a certain element, returning true or false as appropriate. It uses the sameValueZero algorithm to determine whether the given element is found.
+
+    ```javascript
+
+    // bad
+    [TRANSCODE_STATUS.DONE, TRANSCODE_STATUS.ERROR].indexOf(status) < 0
+
+    // good
+    ![TRANSCODE_STATUS.DONE, TRANSCODE_STATUS.ERROR].includes(status)   
+    
     
