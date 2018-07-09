@@ -106,6 +106,32 @@
       benchmark,
     };
     ```
+<a name="format-jsx"></a><a name="3.2"></a>
+  - [3.2](#format-jsx) Put the JSX in the second line below the ( if it needs multiple lines.
+
+    ```javascript
+    const benchmark = 'benchmark';
+
+    // bad
+    { options.map(option => (<Radio
+       key={option}
+       className={style.choiceField}
+       label={option}
+       checked={answer === option}
+       onChange={this.handleChange(option)}
+          />)) }
+
+    // good
+     { options.map(option => (
+          <Radio
+            key={option}
+            className={style.choiceField}
+            label={option}
+            checked={answer === option}
+            onChange={this.handleChange(option)}
+          />
+       )) }
+    ```    
     
  ## Semantization
  <a name="semantization-magic-number"></a><a name="4.1"></a>
