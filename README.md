@@ -24,5 +24,13 @@ If you reassign ferences, use `let` instead of `var`. eslint: [`no-var`](https:/
       maxPage += 1;
     }
     ```
+    
+    ```javascript
+    // bad
+    const item = new Object();
+
+    // good
+    const item = {};
+    ```
 
 ## Format
