@@ -80,11 +80,11 @@
      // ...feature
    });
 
-  // good
-  const mapState = (state, { params: { id, order = 0 } }) => {
+   // good
+   const mapState = (state, { params: { id, order = 0 } }) => {
      // ...feature
-  });
- ```
+   });
+   ```
   
 ## Format    
   <a name="format-object-shorthand"></a><a name="3.1"></a>
