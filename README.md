@@ -4,6 +4,7 @@
 1. [Types](#types)
 1. [DefaultValue](#default-value)
 1. [Format](#format)
+1. [Semantization](#semantization)
 
 ## Types
  <a name="types--references"></a><a name="1.1"></a>
@@ -87,7 +88,7 @@
    ```
   
 ## Format    
-  <a name="format-object-shorthand"></a><a name="3.1"></a>
+<a name="format-object-shorthand"></a><a name="3.1"></a>
   - [3.1](#format-object-shorthand) Use property value shorthand. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
 
     > It is shorter to write and descriptive.
@@ -105,3 +106,21 @@
       benchmark,
     };
     ```
+    
+ ## Semantization
+ <a name="semantization-magic-number"></a><a name="4.1"></a>
+  - [4.1](#semantization-magic-number) Magic Number
+
+    > Avoid use magic number, Please give it more semantic variable.
+
+    ```javascript
+
+    // bad
+    const minimum = question.language === 'zh' ? 150 : 100);
+
+    // good
+    const AT_LEAST_ZH = 150;
+    const AT_LEAST_NOT_ZH = 100;
+    const minimum = question.language === 'zh' ? AT_LEAST_ZH : AT_LEAST_NOT_ZH);
+    ```
+    
