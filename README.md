@@ -119,18 +119,18 @@
        label={option}
        checked={answer === option}
        onChange={this.handleChange(option)}
-          />)) }
+      />)) }
 
     // good
-     { options.map(option => (
-          <Radio
-            key={option}
-            className={style.choiceField}
-            label={option}
-            checked={answer === option}
-            onChange={this.handleChange(option)}
-          />
-       )) }
+    { options.map(option => (
+         <Radio
+           key={option}
+           className={style.choiceField}
+           label={option}
+           checked={answer === option}
+           onChange={this.handleChange(option)}
+         />
+      )) }
     ```    
     
  ## Semantization
