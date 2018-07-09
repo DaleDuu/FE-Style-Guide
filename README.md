@@ -9,6 +9,7 @@
 
     > Why? `let` is block-scoped rether than function-scoped like `var`.
 
+
     ```javascript
     // bad
     var maxPage = 1;
