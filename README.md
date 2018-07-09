@@ -6,8 +6,8 @@
 
 ## Types
 If you reassign ferences, use `let` instead of `var`. eslint: [`no-var`](https://eslint.org/docs/rules/no-var.html)
-> `let` is block-scoped rether than function-scoped like `var`.
 
+   > `let` is block-scoped rether than function-scoped like `var`.
 
     ```javascript
     // bad
