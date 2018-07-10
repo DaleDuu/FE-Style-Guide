@@ -178,6 +178,22 @@
     function setDevice( app, device = {} ) {
       // ...
     }
+    ```  
+    
+<a name="format-ternary"></a><a name="3.6"></a>
+  - [3.6](#format-ternary) Avoid unneeded ternary statements.
+
+    ```javascript
+
+    // bad
+    cont result = situationOne ? situationOne : situationTwo;
+    const hasFeedback = score ? true : false;
+    const hasFeedback = score ? false : true;
+
+    // good
+    cont result = situationOne || situationTwo;
+    const hasFeedback = !!score;
+    const hasFeedback = !score;
     ```      
     
  ## Semantization
