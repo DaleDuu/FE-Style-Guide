@@ -9,7 +9,7 @@
 
 ## Types
  <a name="types--references"></a><a name="1.1"></a>
- - [1.1](#types--references) If you reassign references, use `let` instead of `var`. eslint: [`no-var`](https://eslint.org/docs/rules/no-var.html)
+ - [1.1](#types--references) If you reassign references, use `let` instead of `var`.
 
     > `let` is block-scoped rether than function-scoped like `var`.
 
@@ -89,7 +89,7 @@
   
 ## Format    
 <a name="format-object-shorthand"></a><a name="3.1"></a>
-  - [3.1](#format-object-shorthand) Use property value shorthand. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
+  - [3.1](#format-object-shorthand) Use property value shorthand. 
 
     > It is shorter to write and descriptive.
 
@@ -135,7 +135,7 @@
     ``` 
    
 <a name="format-quotes"></a><a name="3.3"></a>
-  - [3.3](#format-quotes) Use single quotes `''` for strings. eslint: [`quotes`](https://eslint.org/docs/rules/quotes.html)
+  - [3.3](#format-quotes) Use single quotes `''` for strings. 
 
     ```javascript
 
@@ -150,7 +150,7 @@
     ```   
   
 <a name="format-quotes"></a><a name="3.4"></a>
-  - [3.4](#format-quotes) Use single quotes `''` for strings. eslint: [`quotes`](https://eslint.org/docs/rules/quotes.html)
+  - [3.4](#format-quotes) Use single quotes `''` for strings. 
 
     ```javascript
 
