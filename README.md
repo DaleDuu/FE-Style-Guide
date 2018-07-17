@@ -346,5 +346,23 @@
      [1, 2, 3].map((x) => {
        // ...
      });
-     ```          
+     ```   
+     
+ <a name="es6-map"></a><a name="5.7"></a>
+  - [5.7](#es6-map) Get one field from array-object
+
+    ```javascript
+
+     // bad
+     const result = [];
+     
+     filterQuestions.forEach(({ id } = {}) => {
+       result.push(id);
+     })
+     
+     return result;
+
+     // good
+     return filterQuestions.map(value => value.id)
+     ```   
     
