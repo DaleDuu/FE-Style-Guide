@@ -195,6 +195,23 @@
     const hasFeedback = !!score;
     const hasFeedback = !score;
     ```      
+<a name="format-get-first-children-array"></a><a name="3.6"></a>
+  - [3.7](#format-get-first-children-array) Get the first children in array
+
+    ```javascript
+    
+    const feedbacks = [
+      { id: 3, scroe: 3 },
+      { id: 2, scroe: 1 },
+      { id: 1, scroe: 5}
+    ]
+
+    // bad    
+    const firstFeedback = feedbacks[0];
+
+    // good
+    const [firstFeedback] = feedbacks;
+    ```       
     
  ## Semantization
  <a name="semantization-magic-number"></a><a name="4.1"></a>
